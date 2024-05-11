@@ -1,0 +1,9 @@
+.header {
+  background-image: linear-gradient(to top left, limegreen, lawngreen);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  box-shadow: 0 0 5px green;
+}
