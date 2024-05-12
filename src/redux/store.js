@@ -15,6 +15,7 @@ import storage from "redux-persist/lib/storage";
 import { authReducer } from "./auth/slice";
 import { contactsReducer } from "./contacts/slice";
 import { filtersReducer } from "./filters/slice";
+import { globalReducer } from "./global/slice";
 
 const authPersistConfig = {
   key: "auth",
@@ -24,6 +25,7 @@ const authPersistConfig = {
 
 export const store = configureStore({
   reducer: {
+    global: globalReducer,
     auth: persistReducer(authPersistConfig, authReducer),
     contacts: contactsReducer,
     filters: filtersReducer,

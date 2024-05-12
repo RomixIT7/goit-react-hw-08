@@ -35,6 +35,10 @@ const contactValidationScheme = Yup.object().shape({
       `Number must be less than ${MAX_CONTACT_LENGTH} characters`
     )
     .required("This field is required")
+    .matches(
+      /^[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}$/,
+      "Invalid number format. Please, enter number in format XXX-XXX-XX-XX. Use only numbers."
+    )
     .trim(),
 });
 
